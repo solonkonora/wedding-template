@@ -316,12 +316,13 @@ body {
 
   .rsvp-1 {
     background-color: #f3acac;
-    height: 650px;
+    min-height: 800px;
   }
 
   .rsvp-1 h1 {
     text-align: center;
     color: #000;
+    /* padding-top: 20px; */
   }
   }
 
