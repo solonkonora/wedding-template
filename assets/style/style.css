@@ -44,10 +44,16 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.header {
+/* .header {
   opacity: 0.6;
   background-image: url("../images/couple.jpg");
-}
+  min-height: 100%;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  text-align: center;
+} */
 
 .about-couples img,
 .wedding-info .location img {
@@ -60,9 +66,18 @@ body {
   border-radius: 2%;
 }
 
-.header,
-.invitation {
-  /* min-height: 100%; */
+ .header {
+  opacity: 0.6;
+  background-image: url("../images/couple.jpg");
+ /* min-height: 100%;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  text-align: center;*/
+
+
+  min-height: 100%;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -70,9 +85,21 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75vh;
   background-color: #7f7f7f;
-  margin-bottom: -21px;
+} 
+
+.header,
+.invitation {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #7f7f7f;
+  /* margin-bottom: -21px; */
 }
 
 .header .names {
@@ -138,8 +165,13 @@ body {
 }
 
 .invitation .invite {
-  font-size: 40px;
+  min-height: 100%;
   color: white;
+  width: 130px;
+  text-align: center;
+  padding: 15px;
+  line-height: 70px;
+  font-size: 50px;
 }
 
 .invitation h6 {
@@ -174,9 +206,9 @@ body {
 }
 
 .rsvp-1 {
-  background-color: #f3acac;
-  margin-top: -30px;
-  height: 300px;
+  background-color: #f8cccc;
+  /* margin-top: -30px; */
+  height: 400px;
 }
 
 .rsvp-1 button {
@@ -191,7 +223,7 @@ body {
   text-decoration: none;
   border-radius: 5px;
   border-style: none;
-  margin-bottom: -17px;
+  /* margin-bottom: -17px; */
 }
 
 .rsvp-1 button:hover {
@@ -199,16 +231,20 @@ body {
   color: #080808;
 }
 
-.rsvp-1 h1 {
+/* .rsvp-1 h1 {
   text-align: center;
   padding-top: 60px;
-}
+} */
 
 .rsvp-1 .response {
   text-align: center;
   font-size: 17px;
   padding-bottom: 20px;
   padding-top: 10px;
+  width: 250px;
+  margin: auto;
+  line-height: 40px;
+  letter-spacing: 4px
 }
 
 .footer {
@@ -231,6 +267,10 @@ body {
 
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
   .nav-items a {
     color: #000;
     text-align: center;
@@ -240,35 +280,40 @@ body {
   }
 
   .header .names {
-    font-size: 50px;
     color: white;
     display: block;
     text-align: center;
+    width: 130px;
+    letter-spacing: 4px;
   }
-  
+
   .header h3 {
-      font-size: 35px;
-      color: white;
-      display: block;
-      text-align: center;
+    font-size: 30px;
+    color: white;
+    display: block;
+    text-align: center;
+    letter-spacing: 4px;
+    width: 130px;
   }
   
   .header h2 {
-      font-size: 30px;
-      color: white;
-      display: block;
+    font-size: 25px;
+    color: white;
+    display: block;
+    letter-spacing: 4px;
+    padding-bottom: 45px;
   }
   
   .names {
     font-size: 64px!important;
-    
   }
 
   h1, h2, h3, h4, h5, h6 {
-    /* font-family: "Segoe UI",Arial,sans-serif; */
     font-weight: 400;
     margin: 10px 0;
   }
+
+
 
 
 
@@ -293,37 +338,59 @@ body {
   }
 
   .columns {
-      display: block;
+    display: block;
   }
-  
+
   .columns .col-1 {
-      float: left;
-      width: 100%;
-      background-color: #f4d3ec;
+    float: left;
+    width: 100%;
+    background-color: #f4d3ec;
   }
   
   .columns .col-2 {
-      float: left;
-      width: 100%;
-      background-color: #f4d3ec;
+    float: left;
+    width: 100%;
+    background-color: #f4d3ec;
   }
   
   .invitation h6 {
-      font-size: 30px;
-      color: white;
-      padding: 2px;
+    font-size: 30px;
+    color: white;
+    padding: 2px;
   }
 
   .rsvp-1 {
-    background-color: #f3acac;
-    min-height: 800px;
+    background-color: #fbcccc;
+    /* margin-top: -30px; */
+    height: 650px;
   }
 
   .rsvp-1 h1 {
     text-align: center;
-    color: #000;
-    /* padding-top: 20px; */
+    /* padding-top: 60px; */
   }
+  
+  .rsvp-1 button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding: 20px;
+    font-size: larger;
+    background-color: #f26d6d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: none;
+    /* margin-bottom: -17px; */
   }
+
+  .rsvp-1 button:hover {
+    background-color: gray;
+    color: #080808;
+  }
+
+  }
+  
 
 
